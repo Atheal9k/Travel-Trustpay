@@ -39,6 +39,9 @@ const Container = ({}) => {
                   <Link to="/check-balance">Check Balance</Link>
                 </li>
                 <li>
+                  <Link to="/withdraw-page">Withdraw ETH</Link>
+                </li>
+                <li>
                   <Link to="/contact-page">Contact</Link>
                 </li>
               </ul>

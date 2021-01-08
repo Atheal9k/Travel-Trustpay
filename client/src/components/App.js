@@ -8,6 +8,7 @@ import RedeemTokens from "./RedeemTokens";
 import CheckBalance from "./CheckBalance";
 import ContactPage from "./ContactPage";
 import coingecko from "../apis/coingecko";
+import Withdraw from "./Withdraw";
 
 export const LoadingContext = React.createContext();
 export const AccountsContext = React.createContext({ setAccounts: () => {} });
@@ -148,6 +149,15 @@ function App() {
     getTimeRemaining(customerObject);
   };
 
+  const withdrawEth = async (id) => {
+    await contract.methods.withdrawETH(id).send({from: accounts[0]})
+  }
+
+  const withdrawAllEth = async () => {
+    await contract.methods.calculateAmoutOfAllETHForWithdrawal().send({from: accounts[0]})
+    await contract.methods.withdrawAllEth().send({from: accounts[0]})
+  }
+
   return (
     <div>
       <BrowserRouter>
@@ -176,6 +186,9 @@ function App() {
                 </Route>
                 <Route path="/contact-page">
                   <ContactPage />
+                </Route>
+                <Route path="/withdraw-page">
+                  <Withdraw withdrawETH={withdrawEth} withdrawAllEth={withdrawAllEth}/>
                 </Route>
               </Switch>
             </AccountsContext.Provider>
