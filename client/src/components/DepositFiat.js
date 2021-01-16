@@ -1,25 +1,25 @@
-import React, { useState, useContext } from "react";
-import { LoadingContext, ConnectedContext, AccountsContext } from "./App";
-import Spinner from "./Spinner";
+import React, { useState, useContext } from "react"
+import { LoadingContext, ConnectedContext, AccountsContext } from "./App"
+import Spinner from "./Spinner"
 
 const DepositFiat = ({ deposit, price }) => {
-  const [names, setNames] = useState("");
-  const [amount, setAmount] = useState(undefined);
-  const [amountEth, setAmountEth] = useState(undefined);
+  const [names, setNames] = useState("")
+  const [amount, setAmount] = useState(undefined)
+  const [amountStableCoin, setAmountStableCoin] = useState(undefined)
 
-  const loading = useContext(LoadingContext);
-  const { isConnected, setIsConnected } = useContext(ConnectedContext);
+  const loading = useContext(LoadingContext)
+  const { isConnected, setIsConnected } = useContext(ConnectedContext)
 
   const updateNames = (e) => {
-    e.preventDefault();
-    setNames(e.target.value);
-  };
+    e.preventDefault()
+    setNames(e.target.value)
+  }
 
   const updateAmount = (e) => {
-    e.preventDefault();
-    setAmount(e.target.value);
-    setAmountEth(e.target.value / price);
-  };
+    e.preventDefault()
+    setAmount(e.target.value)
+    setAmountEth(e.target.value / price)
+  }
 
   // const updateAmountEth = (e) => {
   //     e.preventDefault();
@@ -27,16 +27,16 @@ const DepositFiat = ({ deposit, price }) => {
   // }
 
   const submitValue = (e) => {
-    e.preventDefault();
-    const name = e.target.elements[0].value;
-    const amount = e.target.elements[1].value;
-    const ethToSend = e.target.elements[2].value;
+    e.preventDefault()
+    const name = e.target.elements[0].value
+    const amount = e.target.elements[1].value
+    const stableCoinToSend = e.target.elements[2].value
     //const ethToSend = 100.5
-    deposit(name, amount, ethToSend);
-    setNames("");
-    setAmount("");
-    setAmountEth("");
-  };
+    deposit(name, amount, stableCoinToSend)
+    setNames("")
+    setAmount("")
+    setAmountStableCoin("")
+  }
 
   return (
     <div id="main">
@@ -70,12 +70,12 @@ const DepositFiat = ({ deposit, price }) => {
               </div>
 
               <div class="field half">
-                <label for="demo-email">Amount Of ETH To Send</label>
+                <label for="demo-email">Amount Of USDC To Send</label>
                 <input
                   type="text"
                   name="demo-name"
                   id="demo-name-eth"
-                  value={amountEth}
+                  value={amountStableCoin}
                   placeholder="Amout Of ETH To Send"
                   disabled
                 />
@@ -97,7 +97,7 @@ const DepositFiat = ({ deposit, price }) => {
         </section>
       </article>
     </div>
-  );
-};
+  )
+}
 
-export default DepositFiat;
+export default DepositFiat
