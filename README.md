@@ -33,4 +33,4 @@ skipDryRun: true // Skip dry run before migrations? (default: false for public n
 
 # Spin Up Local Server
 
-Once dependencies are installed, typed npm start in CLI to run a local web server. You should be able to interact with the smart contract.
+Once dependencies are installed, typed npm start in CLI to run a local web server. You should be able to interact with the smart contract..
