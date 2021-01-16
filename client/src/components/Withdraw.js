@@ -1,28 +1,28 @@
-import React, { useState, useContext } from "react";
-import { LoadingContext, ConnectedContext } from "./App";
-import Spinner from "./Spinner";
+import React, { useState, useContext } from "react"
+import { LoadingContext, ConnectedContext } from "./App"
+import Spinner from "./Spinner"
 
-const Withdraw = ({ withdrawETH, withdrawAllEth }) => {
-  const [id, setId] = useState("");
+const Withdraw = ({ withdrawStableCoin, withdrawAllStableCoin }) => {
+  const [id, setId] = useState("")
 
-  const loading = useContext(LoadingContext);
-  const { isConnected, setIsConnected } = useContext(ConnectedContext);
+  const loading = useContext(LoadingContext)
+  const { isConnected, setIsConnected } = useContext(ConnectedContext)
 
   const updateId = (e) => {
-    e.preventDefault();
-    setId(e.target.value);
-  };
+    e.preventDefault()
+    setId(e.target.value)
+  }
 
   const submitValue = (e) => {
-    e.preventDefault();
-    const id = e.target.elements[0].value;
-    withdrawETH(id);
-    setId("");
-  };
+    e.preventDefault()
+    const id = e.target.elements[0].value
+    withdrawStableCoin(id)
+    setId("")
+  }
 
   const submitWithdrawAll = (e) => {
     e.preventDefault()
-    withdrawAllEth()
+    withdrawAllStableCoin()
   }
 
   return (
@@ -50,7 +50,7 @@ const Withdraw = ({ withdrawETH, withdrawAllEth }) => {
                   loading ? (
                     <Spinner />
                   ) : (
-                    <button id="depositButton">Withdraw ETH</button>
+                    <button id="depositButton">Withdraw USDC</button>
                   )
                 ) : (
                   <button disabled>Please Connect Your Wallet</button>
@@ -58,22 +58,22 @@ const Withdraw = ({ withdrawETH, withdrawAllEth }) => {
               </div>
             </div>
           </form>
-          
+
           <div className="depositPageButton" onClick={submitWithdrawAll}>
-                {isConnected === "connected" ? (
-                  loading ? (
-                    <Spinner />
-                  ) : (
-                    <button id="depositButton">Withdraw All ETH</button>
-                  )
-                ) : (
-                  <button disabled>Please Connect Your Wallet</button>
-                )}
-              </div>
+            {isConnected === "connected" ? (
+              loading ? (
+                <Spinner />
+              ) : (
+                <button id="depositButton">Withdraw All ETH</button>
+              )
+            ) : (
+              <button disabled>Please Connect Your Wallet</button>
+            )}
+          </div>
         </section>
       </article>
     </div>
-  );
-};
+  )
+}
 
-export default Withdraw;
+export default Withdraw

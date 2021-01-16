@@ -1,35 +1,35 @@
-import React, { useState } from "react";
-import ConnectWallet from "./ConnectWallet";
+import React, { useState } from "react"
+import ConnectWallet from "./ConnectWallet"
 
 const CheckBalance = ({
   getTokenBalance,
   tokenBalance,
-  ethBalance,
+  stableCoinBalance,
   customerName,
   timeRemaining1,
   timeRemaining2,
   timeRemaining3,
   timeRemaining4,
 }) => {
-  const [balances, setBalances] = useState(undefined);
+  const [balances, setBalances] = useState(undefined)
 
   const updateBalances = (e) => {
-    e.preventDefault();
-    setBalances(e.target.value);
-  };
+    e.preventDefault()
+    setBalances(e.target.value)
+  }
 
   const submitValue = (e) => {
-    e.preventDefault();
-    const id = e.target.elements[0].value;
+    e.preventDefault()
+    const id = e.target.elements[0].value
 
     getTokenBalance(id)
       .then((result) => {
-        console.log("success");
+        console.log("success")
       })
       .catch((err) => {
-        console.log("failed");
-      });
-  };
+        console.log("failed")
+      })
+  }
 
   return (
     <div id="main">
@@ -66,9 +66,9 @@ const CheckBalance = ({
         <div>
           <h3 className="balance-information">{tokenBalance}</h3>
         </div>
-        <label className="balance-information">ETH Balance:</label>
+        <label className="balance-information">Stable Coin Balance:</label>
         <div>
-          <h3 className="balance-information">{ethBalance}</h3>
+          <h3 className="balance-information">{stableCoinBalance}</h3>
         </div>
         <label className="balance-information">First Cancel Deadline:</label>
         <div>
@@ -88,7 +88,7 @@ const CheckBalance = ({
         </div>
       </article>
     </div>
-  );
-};
+  )
+}
 
-export default CheckBalance;
+export default CheckBalance
