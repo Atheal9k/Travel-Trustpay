@@ -7,6 +7,7 @@ import DepositFiat from "./DepositFiat"
 import RedeemTokens from "./RedeemTokens"
 import CheckBalance from "./CheckBalance"
 import ContactPage from "./ContactPage"
+import AboutPage from "./AboutPage"
 import coingecko from "../apis/coingecko"
 import Withdraw from "./Withdraw"
 import USDC20 from "../contracts/ERC20.json"
@@ -38,7 +39,7 @@ function App() {
   const ethDecimals = 10 ** 18
 
   //set function not actually setting value so have to manually do it
-  var tempUSDCADDRESS = ""
+
   useEffect(() => {
     const init = async () => {
       const web3 = await getWeb3()
@@ -57,8 +58,6 @@ function App() {
       )
 
       setUContract(USDCContract)
-
-      tempUSDCADDRESS = USDCObject.address
 
       console.log(accounts)
       if (typeof accounts !== "undefined") {
@@ -215,6 +214,9 @@ function App() {
                     timeRemaining3={timeRemaining3}
                     timeRemaining4={timeRemaining4}
                   />
+                </Route>
+                <Route path="/about-page">
+                  <AboutPage />
                 </Route>
                 <Route path="/contact-page">
                   <ContactPage />

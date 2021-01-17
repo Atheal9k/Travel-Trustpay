@@ -43,6 +43,9 @@ const Container = ({}) => {
                   <Link to="/withdraw-page">Withdraw USDC</Link>
                 </li>
                 <li>
+                  <Link to="/about-page">About Blockchain</Link>
+                </li>
+                <li>
                   <Link to="/contact-page">Contact</Link>
                 </li>
               </ul>
