@@ -18,7 +18,7 @@ const DepositFiat = ({ deposit, price }) => {
   const updateAmount = (e) => {
     e.preventDefault()
     setAmount(e.target.value)
-    setAmountEth(e.target.value / price)
+    setAmountStableCoin(e.target.value / price)
   }
 
   // const updateAmountEth = (e) => {

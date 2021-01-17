@@ -1,14 +1,14 @@
-import React, { useEffect, useState, useContext } from "react";
-import { Link } from "react-router-dom";
-import "../assets/css/main.css";
-import "../assets/css/noscript.css";
-import ConnectWallet from "./ConnectWallet";
-import { ConnectedContext } from "./App";
-import logo from '../images/ttp.png';
+import React, { useEffect, useState, useContext } from "react"
+import { Link } from "react-router-dom"
+import "../assets/css/main.css"
+import "../assets/css/noscript.css"
+import ConnectWallet from "./ConnectWallet"
+import { ConnectedContext } from "./App"
+import logo from "../images/ttp.png"
 
 const Container = ({}) => {
-  const { isConnected, setIsConnected } = useContext(ConnectedContext);
-  console.log(isConnected);
+  const { isConnected, setIsConnected } = useContext(ConnectedContext)
+  console.log(isConnected)
   return (
     <>
       <body class="is-preload">
@@ -20,7 +20,7 @@ const Container = ({}) => {
             <div class="content">
               <div class="inner">
                 <h1>Travel Trust Pay</h1>
-                <img src={logo} />
+                <img class="logoImg" src={logo} />
                 <p>
                   Guaranteed Refunds For Travel
                   <br />
@@ -41,7 +41,7 @@ const Container = ({}) => {
                   <Link to="/check-balance">Check Balance</Link>
                 </li>
                 <li>
-                  <Link to="/withdraw-page">Withdraw ETH</Link>
+                  <Link to="/withdraw-page">Withdraw USDC</Link>
                 </li>
                 <li>
                   <Link to="/contact-page">Contact</Link>
@@ -56,7 +56,7 @@ const Container = ({}) => {
         </div>
       </body>
     </>
-  );
-};
+  )
+}
 
-export default Container;
+export default Container

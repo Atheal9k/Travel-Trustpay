@@ -413,22 +413,22 @@
     "absolutePath": "/D/Users/victo/Desktop/Crypto Programming/Ethereum/TrustTravelPay/contracts/FlightToken.sol",
     "exportedSymbols": {
       "Context": [
-        722
+        746
       ],
       "ERC20": [
-        1530
+        1554
       ],
       "FlightToken": [
         71
       ],
       "IERC20": [
-        1608
+        1632
       ],
       "Ownable": [
-        831
+        855
       ],
       "SafeMath": [
-        1027
+        1051
       ]
     },
     "id": 72,
@@ -450,7 +450,7 @@
         "id": 2,
         "nodeType": "ImportDirective",
         "scope": 72,
-        "sourceUnit": 1531,
+        "sourceUnit": 1555,
         "src": "26:55:0",
         "symbolAliases": [],
         "unitAlias": ""
@@ -461,7 +461,7 @@
         "id": 3,
         "nodeType": "ImportDirective",
         "scope": 72,
-        "sourceUnit": 832,
+        "sourceUnit": 856,
         "src": "83:52:0",
         "symbolAliases": [],
         "unitAlias": ""
@@ -474,10 +474,10 @@
               "id": 4,
               "name": "ERC20",
               "nodeType": "UserDefinedTypeName",
-              "referencedDeclaration": 1530,
+              "referencedDeclaration": 1554,
               "src": "163:5:0",
               "typeDescriptions": {
-                "typeIdentifier": "t_contract$_ERC20_$1530",
+                "typeIdentifier": "t_contract$_ERC20_$1554",
                 "typeString": "contract ERC20"
               }
             },
@@ -490,10 +490,10 @@
               "id": 6,
               "name": "Ownable",
               "nodeType": "UserDefinedTypeName",
-              "referencedDeclaration": 831,
+              "referencedDeclaration": 855,
               "src": "170:7:0",
               "typeDescriptions": {
-                "typeIdentifier": "t_contract$_Ownable_$831",
+                "typeIdentifier": "t_contract$_Ownable_$855",
                 "typeString": "contract Ownable"
               }
             },
@@ -503,20 +503,20 @@
           }
         ],
         "contractDependencies": [
-          722,
-          831,
-          1530,
-          1608
+          746,
+          855,
+          1554,
+          1632
         ],
         "contractKind": "contract",
         "fullyImplemented": true,
         "id": 71,
         "linearizedBaseContracts": [
           71,
-          831,
-          1530,
-          1608,
-          722
+          855,
+          1554,
+          1632,
+          746
         ],
         "name": "FlightToken",
         "nodeType": "ContractDefinition",
@@ -601,10 +601,10 @@
                   "name": "ERC20",
                   "nodeType": "Identifier",
                   "overloadedDeclarations": [],
-                  "referencedDeclaration": 1530,
+                  "referencedDeclaration": 1554,
                   "src": "234:5:0",
                   "typeDescriptions": {
-                    "typeIdentifier": "t_type$_t_contract$_ERC20_$1530_$",
+                    "typeIdentifier": "t_type$_t_contract$_ERC20_$1554_$",
                     "typeString": "type(contract ERC20)"
                   }
                 },
@@ -681,7 +681,7 @@
                       "name": "_mint",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 1406,
+                      "referencedDeclaration": 1430,
                       "src": "383:5:0",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_internal_nonpayable$_t_address_$_t_uint256_$returns$__$",
@@ -856,7 +856,7 @@
                       "name": "_burn",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 1462,
+                      "referencedDeclaration": 1486,
                       "src": "517:5:0",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_internal_nonpayable$_t_address_$_t_uint256_$returns$__$",
@@ -1046,7 +1046,7 @@
                   "name": "onlyOwner",
                   "nodeType": "Identifier",
                   "overloadedDeclarations": [],
-                  "referencedDeclaration": 780,
+                  "referencedDeclaration": 804,
                   "src": "615:9:0",
                   "typeDescriptions": {
                     "typeIdentifier": "t_modifier$__$",
@@ -1242,22 +1242,22 @@
     "absolutePath": "/D/Users/victo/Desktop/Crypto Programming/Ethereum/TrustTravelPay/contracts/FlightToken.sol",
     "exportedSymbols": {
       "Context": [
-        722
+        746
       ],
       "ERC20": [
-        1530
+        1554
       ],
       "FlightToken": [
         71
       ],
       "IERC20": [
-        1608
+        1632
       ],
       "Ownable": [
-        831
+        855
       ],
       "SafeMath": [
-        1027
+        1051
       ]
     },
     "id": 72,
@@ -1279,7 +1279,7 @@
         "id": 2,
         "nodeType": "ImportDirective",
         "scope": 72,
-        "sourceUnit": 1531,
+        "sourceUnit": 1555,
         "src": "26:55:0",
         "symbolAliases": [],
         "unitAlias": ""
@@ -1290,7 +1290,7 @@
         "id": 3,
         "nodeType": "ImportDirective",
         "scope": 72,
-        "sourceUnit": 832,
+        "sourceUnit": 856,
         "src": "83:52:0",
         "symbolAliases": [],
         "unitAlias": ""
@@ -1303,10 +1303,10 @@
               "id": 4,
               "name": "ERC20",
               "nodeType": "UserDefinedTypeName",
-              "referencedDeclaration": 1530,
+              "referencedDeclaration": 1554,
               "src": "163:5:0",
               "typeDescriptions": {
-                "typeIdentifier": "t_contract$_ERC20_$1530",
+                "typeIdentifier": "t_contract$_ERC20_$1554",
                 "typeString": "contract ERC20"
               }
             },
@@ -1319,10 +1319,10 @@
               "id": 6,
               "name": "Ownable",
               "nodeType": "UserDefinedTypeName",
-              "referencedDeclaration": 831,
+              "referencedDeclaration": 855,
               "src": "170:7:0",
               "typeDescriptions": {
-                "typeIdentifier": "t_contract$_Ownable_$831",
+                "typeIdentifier": "t_contract$_Ownable_$855",
                 "typeString": "contract Ownable"
               }
             },
@@ -1332,20 +1332,20 @@
           }
         ],
         "contractDependencies": [
-          722,
-          831,
-          1530,
-          1608
+          746,
+          855,
+          1554,
+          1632
         ],
         "contractKind": "contract",
         "fullyImplemented": true,
         "id": 71,
         "linearizedBaseContracts": [
           71,
-          831,
-          1530,
-          1608,
-          722
+          855,
+          1554,
+          1632,
+          746
         ],
         "name": "FlightToken",
         "nodeType": "ContractDefinition",
@@ -1430,10 +1430,10 @@
                   "name": "ERC20",
                   "nodeType": "Identifier",
                   "overloadedDeclarations": [],
-                  "referencedDeclaration": 1530,
+                  "referencedDeclaration": 1554,
                   "src": "234:5:0",
                   "typeDescriptions": {
-                    "typeIdentifier": "t_type$_t_contract$_ERC20_$1530_$",
+                    "typeIdentifier": "t_type$_t_contract$_ERC20_$1554_$",
                     "typeString": "type(contract ERC20)"
                   }
                 },
@@ -1510,7 +1510,7 @@
                       "name": "_mint",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 1406,
+                      "referencedDeclaration": 1430,
                       "src": "383:5:0",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_internal_nonpayable$_t_address_$_t_uint256_$returns$__$",
@@ -1685,7 +1685,7 @@
                       "name": "_burn",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 1462,
+                      "referencedDeclaration": 1486,
                       "src": "517:5:0",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_internal_nonpayable$_t_address_$_t_uint256_$returns$__$",
@@ -1875,7 +1875,7 @@
                   "name": "onlyOwner",
                   "nodeType": "Identifier",
                   "overloadedDeclarations": [],
-                  "referencedDeclaration": 780,
+                  "referencedDeclaration": 804,
                   "src": "615:9:0",
                   "typeDescriptions": {
                     "typeIdentifier": "t_modifier$__$",
@@ -2145,8 +2145,8 @@
         }
       },
       "links": {},
-      "address": "0xA013C6533f1cFf3bd639C4DC682a32c609f9A763",
-      "transactionHash": "0xbe8d0c0a9e7f6139d9ed949b4cff3d4a668c427cf66d5203472aafa163555d5e"
+      "address": "0x3321B3De4e433dC93a699c420e33a877Ee4D032A",
+      "transactionHash": "0x9271a48fa6aa52c4b7e5cdcf31db9466d1b87ad4a83dc12aa3dba8ba98be507a"
     },
     "5777": {
       "events": {
@@ -2226,7 +2226,7 @@
     }
   },
   "schemaVersion": "3.3.2",
-  "updatedAt": "2021-01-16T01:38:04.566Z",
+  "updatedAt": "2021-01-16T10:22:44.478Z",
   "networkType": "ethereum",
   "devdoc": {
     "kind": "dev",

@@ -2,7 +2,7 @@ const PayTrust = artifacts.require("./PayTrust.sol")
 const FlightToken = artifacts.require("./FlightToken.sol")
 const USDCMock = artifacts.require("./USDCMock.sol")
 
-module.exports = async function (deployer) {
+module.exports = async function (deployer, accounts) {
   await deployer.deploy(FlightToken)
   const flightToken = await FlightToken.deployed()
   const flightTokenAddress = await flightToken.address
@@ -12,7 +12,7 @@ module.exports = async function (deployer) {
   const usdcMockAddress = await usdcMock.address
   await usdcMock.faucet(
     "0x2Ac95B744f4eAB40B56281Eca7b4aC8b64dfda77",
-    web3.utils.toWei("1000000", "ether").toString()
+    web3.utils.toWei("10000000", "ether").toString()
   )
 
   await deployer.deploy(PayTrust, flightTokenAddress, usdcMockAddress)

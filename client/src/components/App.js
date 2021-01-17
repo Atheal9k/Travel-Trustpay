@@ -9,6 +9,8 @@ import CheckBalance from "./CheckBalance"
 import ContactPage from "./ContactPage"
 import coingecko from "../apis/coingecko"
 import Withdraw from "./Withdraw"
+import USDC20 from "../contracts/ERC20.json"
+import USDCAddress from "../contracts/USDCMock.json"
 
 export const LoadingContext = React.createContext()
 export const AccountsContext = React.createContext({ setAccounts: () => {} })
@@ -31,8 +33,12 @@ function App() {
   const [timeRemaining3, setTimeRemaining3] = useState([])
   const [timeRemaining4, setTimeRemaining4] = useState([])
 
+  const [uContract, setUContract] = useState(undefined)
+
   const ethDecimals = 10 ** 18
 
+  //set function not actually setting value so have to manually do it
+  var tempUSDCADDRESS = ""
   useEffect(() => {
     const init = async () => {
       const web3 = await getWeb3()
@@ -43,6 +49,16 @@ function App() {
         PayTrust.abi,
         deployedNetwork && deployedNetwork.address
       )
+
+      const USDCObject = USDCAddress.networks[networkId]
+      const USDCContract = new web3.eth.Contract(
+        USDC20.abi,
+        USDCObject && USDCObject.address
+      )
+
+      setUContract(USDCContract)
+
+      tempUSDCADDRESS = USDCObject.address
 
       console.log(accounts)
       if (typeof accounts !== "undefined") {
@@ -58,25 +74,38 @@ function App() {
   }, [])
 
   useEffect(() => {
-    const getEthPrice = async () => {
+    const getStableCoinPrice = async () => {
       const response = await coingecko.get()
-      setEthPrice(response.data.ethereum.aud)
+      console.log(response.data["usd-coin"].aud)
+      // prettier-ignore
+      setStableCoinPrice(response.data["usd-coin"].aud)
     }
-    setInterval(getEthPrice, 3000)
-  }, [ethPrice])
+    setInterval(getStableCoinPrice, 3000)
+  }, [stableCoinPrice])
 
-  const deposit = async (name, amount, ethToSend) => {
+  const deposit = async (name, amount, stableCoinToSend) => {
     let amountString = amount.toString()
     amount = web3.utils.toWei(amountString, "ether").toString()
 
-    let ethAmountString = ethToSend.toString()
-    ethToSend = web3.utils.toWei(ethAmountString, "ether").toString()
+    let stableCoinAmountString = stableCoinToSend.toString()
+    stableCoinToSend = web3.utils
+      .toWei(stableCoinAmountString, "ether")
+      .toString()
 
     const address = accounts[0]
     try {
       setLoading(true)
+      await uContract.methods
+        .approve(contract._address, stableCoinToSend)
+        .send({ from: accounts[0] })
+
+      const res = await uContract.methods
+        .allowance(address, "0xe3Aab3F1795Bb5bf037ae04DBfBe4fa59b19FEc2")
+        .call()
+      console.log("allowed " + res)
+
       let log = await contract.methods
-        .deposit(name, amount, ethToSend, address)
+        .deposit(name, amount, stableCoinToSend, address)
         .send({ from: accounts[0] })
       setLoading(false)
       alert(

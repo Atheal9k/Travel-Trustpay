@@ -101,6 +101,7 @@ contract payTrust is Ownable {
             stablecoinAmount,
             tokensToMint
         );
+        USDC.transferFrom(msg.sender, address(this), stablecoinAmount);
         flightToken.mint(address(this), tokensToMint);
         emit DepositSuccessful(name, nextCustomerId);
         nextCustomerId = nextCustomerId.add(1);
