@@ -4,7 +4,7 @@ import "../assets/css/main.css"
 import "../assets/css/noscript.css"
 import ConnectWallet from "./ConnectWallet"
 import { ConnectedContext } from "./App"
-import logo from "../images/ttp.png"
+import logo from "../images/ttp2.png"
 
 const Container = ({}) => {
   const { isConnected, setIsConnected } = useContext(ConnectedContext)
@@ -19,7 +19,6 @@ const Container = ({}) => {
             </div>
             <div class="content">
               <div class="inner">
-                <h1>Travel Trust Pay</h1>
                 <img class="logoImg" src={logo} />
                 <p>
                   Guaranteed Refunds For Travel
