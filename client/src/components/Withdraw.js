@@ -64,7 +64,7 @@ const Withdraw = ({ withdrawStableCoin, withdrawAllStableCoin }) => {
               loading ? (
                 <Spinner />
               ) : (
-                <button id="depositButton">Withdraw All ETH</button>
+                <button id="depositButton">Withdraw All USDC</button>
               )
             ) : (
               <button disabled>Please Connect Your Wallet</button>

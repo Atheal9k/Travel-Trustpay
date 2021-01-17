@@ -34,7 +34,7 @@ const Container = ({}) => {
                   <Link to="/deposit-fiat">Deposit AUD</Link>
                 </li>
                 <li>
-                  <Link to="/redeem-tokens">Redeem Tokens</Link>
+                  <Link to="/redeem-tokens">Redeem Flight Tokens</Link>
                 </li>
                 <li>
                   <Link to="/check-balance">Check Balance</Link>

@@ -58,13 +58,13 @@ const DepositFiat = ({ deposit, price }) => {
                 />
               </div>
               <div class="field half">
-                <label for="demo-email">Amount Of Tokens To Mint</label>
+                <label for="demo-email">Amount Of Tokens To Create</label>
                 <input
                   type="text"
                   name="demo-name"
                   id="demo-name"
                   value={amount}
-                  placeholder="Enter Token To Mint"
+                  placeholder="Enter Token To Create"
                   onChange={updateAmount}
                 />
               </div>
@@ -76,7 +76,7 @@ const DepositFiat = ({ deposit, price }) => {
                   name="demo-name"
                   id="demo-name-eth"
                   value={amountStableCoin}
-                  placeholder="Amout Of ETH To Send"
+                  placeholder="Amout Of USDC To Send"
                   disabled
                 />
               </div>
